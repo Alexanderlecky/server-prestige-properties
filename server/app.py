@@ -170,6 +170,7 @@ def delete_favorite(favorite_id):
     return jsonify({"message": "Favorite removed successfully"}), 200
 
 # ------------------ Run Application ------------------
-if __name__ == "__main__":
-    app = create_app()
-    app.run(host='0.0.0.0',port =5555 ,debug=False)
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+
