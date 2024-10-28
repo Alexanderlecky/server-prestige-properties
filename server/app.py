@@ -15,10 +15,10 @@ load_dotenv()
 
 
 # Initialize Flask and its extensions
-def create_app():
-    app = Flask(__name__, instance_relative_config=True)
-    app.config.from_object(Config)  # Load configurations from Config class
-    CORS(app)
+
+app = Flask(__name__, instance_relative_config=True)
+app.config.from_object(Config)  # Load configurations from Config class
+CORS(app)
 
 # Initialize extensions
 db.init_app(app)
