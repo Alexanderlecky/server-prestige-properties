@@ -36,6 +36,10 @@ def load_user(user_id):
 
 # ------------------ Authentication Endpoints ------------------
 
+@app.route('/')
+def home():
+    return jsonify(message="Hello, World!")
+
 # POST: Sign up
 @app.route('/signup', methods=['POST'])
 def signup():
